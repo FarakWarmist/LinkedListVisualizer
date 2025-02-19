@@ -42,6 +42,21 @@ void ofApp::keyPressed(int key){
 	{
 		circlesList.insertAtHead(10 + std::rand() % 91);
 	}
+
+	if (key == 'w')
+	{
+		circlesList.insertAtTail(10 + std::rand() % 91);
+	}
+
+	if (key == 'a')
+	{
+		circlesList.deleteHead();
+	}
+
+	if (key == 's')
+	{
+		circlesList.deleteTail();
+	}
 }
 
 //--------------------------------------------------------------
