@@ -53,9 +53,9 @@ void ofApp::keyPressed(int key){
 		circlesList.deleteHead();
 	}
 
-	if (key == 's')
+	if (key == 'e')
 	{
-		circlesList.deleteTail();
+		circlesList.sortAscending();
 	}
 }
 

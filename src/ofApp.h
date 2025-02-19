@@ -48,7 +48,7 @@ public:
 		}
 	}
 
-	void deletedHead()
+	void deleteHead()
 	{
 		if (head == nullptr)
 		{
@@ -84,6 +84,39 @@ public:
 		delete temp->next;
 		temp->next = nullptr;
 	}
+
+	void sortAscending()
+	{
+		if (head == nullptr || head->next == nullptr)
+		{
+			return;
+		}
+
+		Node* temp = head;
+		while (temp)
+		{
+			Node* minNode = temp;
+			Node* nextNode = temp->next;
+
+			while (nextNode)
+			{
+				if (nextNode->data < minNode->data)
+				{
+					minNode = nextNode;
+				}
+				nextNode = nextNode->next;
+			}
+
+			if (minNode != temp)
+			{
+				std::swap(temp->data, minNode->data);
+			}
+			
+			temp = temp->next;
+		}
+
+	}
+
 };
 
 class ofApp : public ofBaseApp{
