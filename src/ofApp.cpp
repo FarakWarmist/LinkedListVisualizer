@@ -18,16 +18,23 @@ void ofApp::draw(){
 	Node* prev = nullptr;
 	index = 0;
 
-	while (temp != nullptr) {
+	float time = ofGetElapsedTimef();
+
+	while (temp != nullptr)
+	{
+		float yOffset = sin(time * speed + index) * amplitude;
+		float x = 100 + index * 200 + cameraOffset; // Ajoute l'offset pour le défilement
+		float y = 200 + yOffset;
+
 		ofSetColor(255);
-		ofDrawCircle(100 + index * 200, 200, temp->data);
+		ofDrawCircle(x, y, temp->data);
 		ofSetColor(0);
-		ofDrawBitmapString(ofToString(temp->data), (100 + index * 200) - 5, 200 + 5);
+		ofDrawBitmapString(ofToString(temp->data), x - 5, y + 5);
 
 		if (prev != nullptr)
 		{
 			ofSetColor(255);
-			ofDrawLine(100 + (index - 1) * 200, 200, 100 + index * 200, 200);
+			ofDrawLine((100 + (index - 1) * 200) + cameraOffset, 200 + sin(time * speed + (index - 1)) * amplitude, x, y);
 		}
 
 		prev = temp;
@@ -53,9 +60,34 @@ void ofApp::keyPressed(int key){
 		circlesList.deleteHead();
 	}
 
+	if (key == 's')
+	{
+		circlesList.deleteTail();
+	}
+
 	if (key == 'e')
 	{
 		circlesList.sortAscending();
+	}
+
+	if (key == 'z')
+	{
+		amplitude += 5.0f;
+	}
+	
+	if (key == 'x')
+	{
+		amplitude = std::max(5.0f, amplitude - 5.0f);
+	}
+	
+	if (key == OF_KEY_LEFT)
+	{
+		cameraOffset += cameraSpeed;
+	}
+	
+	if (key == OF_KEY_RIGHT)
+	{
+		cameraOffset -= cameraSpeed;
 	}
 }
 

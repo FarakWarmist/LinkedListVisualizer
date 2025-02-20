@@ -122,8 +122,11 @@ public:
 class ofApp : public ofBaseApp{
 
 	public:
-		float x = 100.0f;
-		int index = 0;
+		float amplitude = 10.0f;
+		float speed = 2.0f;
+		float cameraOffset = 0.0f;
+		float cameraSpeed = 10.0f;
+		int index;
 		LinkedList circlesList;
 
 		void setup();
