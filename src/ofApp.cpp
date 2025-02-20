@@ -9,7 +9,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+	time += ofGetLastFrameTime();
 }
 
 //--------------------------------------------------------------
@@ -17,8 +17,6 @@ void ofApp::draw(){
 	Node* temp = circlesList.head;
 	Node* prev = nullptr;
 	index = 0;
-
-	float time = ofGetElapsedTimef();
 
 	while (temp != nullptr)
 	{

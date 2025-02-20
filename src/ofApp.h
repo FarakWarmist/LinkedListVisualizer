@@ -126,6 +126,7 @@ class ofApp : public ofBaseApp{
 		float speed = 2.0f;
 		float cameraOffset = 0.0f;
 		float cameraSpeed = 10.0f;
+		float time;
 		int index;
 		LinkedList circlesList;
 
