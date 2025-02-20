@@ -6,15 +6,15 @@ Ce programme peut générer des nodes sous la forme de cercles avec une animatio
 _______________
 -- CONTRÔLES -- 
 _______________
-q => Génère une nouvelle node au début de la chaîne.
-w => Génère une nouvelle node à la fin de la chaîne.
-a => Retire la node au début de la chaîne.
-s => Retire la node à la fin de la chaîne.
-e => Affiche les nodes de la chaîne par ordre croissant.
-z => Augmente l'amplitude de l'animation.
-x => Diminue l'amplitude de l'animation.
-flèche de gauche => Déplace la caméra vers la gauche.
-flèche de droite => Déplace la caméra vers la droite.
+- q => Génère une nouvelle node au début de la chaîne.
+- w => Génère une nouvelle node à la fin de la chaîne.
+- a => Retire la node au début de la chaîne.
+- s => Retire la node à la fin de la chaîne.
+- e => Affiche les nodes de la chaîne par ordre croissant.
+- z => Augmente l'amplitude de l'animation.
+- x => Diminue l'amplitude de l'animation.
+- flèche de gauche => Déplace la caméra vers la gauche.
+- flèche de droite => Déplace la caméra vers la droite.
 
 _______________
 -- RÉFÉRENCES --
