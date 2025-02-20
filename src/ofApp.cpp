@@ -23,7 +23,7 @@ void ofApp::draw(){
 	while (temp != nullptr)
 	{
 		float yOffset = sin(time * speed + index) * amplitude;
-		float x = 100 + index * 200 + cameraOffset; // Ajoute l'offset pour le défilement
+		float x = 100 + index * 200 + cameraOffset;
 		float y = 200 + yOffset;
 
 		ofSetColor(255);
